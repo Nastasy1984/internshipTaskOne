@@ -61,7 +61,7 @@ public class Response {
             writer.write(bodyContent.toString());
             writer.flush();
         } catch (IOException ex) {
-            LOG.error("Cannot create file writer in printResponseToFile method, caught {} stack trace {}", ex.getClass().getName(), ex.getStackTrace());
+            LOG.error("Cannot create file writer in printResponseToFile method, caught {}", ex.getClass().getName());
             LOG.error("Stack trace {}",  ex.getStackTrace());
             ex.printStackTrace();
         }
