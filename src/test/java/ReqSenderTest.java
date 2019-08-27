@@ -33,7 +33,7 @@ public class ReqSenderTest {
     public void getReqWith404Error() {
         String getUrlWithMistake = "http://192.168.129.62:8083/OCPDataServices/api/cus123tomer/history/detail/123";
         Response getResp = reqSender.getReq(getUrlWithMistake);
-        assertEquals("Response code is incorrect", 404, getResp.getResponseCode());
+        assertEquals("Response code for 404 error is incorrect", 404, getResp.getResponseCode());
         assertEquals("Response body for 404 error is incorrect", "", getResp.getBodyContent());
     }
 
@@ -50,7 +50,7 @@ public class ReqSenderTest {
                 " \"parameters\":{\"firstName\":\"e\", \"lastName\":\"\", \"phoneNumber\":\"\", " +
                 "\"emailAddress\":\"\", \"socialMediaHandle\":\"\"}\n}";
         Response postResp = reqSender.postReq(postUrl, testPostBody);
-        assertEquals("Response code for 404 error is incorrect", 200, postResp.getResponseCode());
+        assertEquals("Response code is incorrect", 200, postResp.getResponseCode());
         assertTrue("Response body is incorrect", postResp.getBodyContent().contains("\"id\":\"54\""));
     }
 
