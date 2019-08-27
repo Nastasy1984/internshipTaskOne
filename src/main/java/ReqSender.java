@@ -37,7 +37,8 @@ public class ReqSender {
             getResp.printResponseToFile("getReqResult.json");
         }
         catch (NullPointerException ex){
-            LOG.error("Cannot get response from getReq method, caught {} stack trace {}", ex.getClass().getName(), ex.getStackTrace());
+            LOG.error("Cannot get response from getReq method, caught {}", ex.getClass().getName());
+            LOG.error("Stack trace {}", ex.getStackTrace());
         }
     }
 
@@ -49,7 +50,8 @@ public class ReqSender {
             postResp.printResponseToFile("postReqResult.json");
         }
         catch (NullPointerException ex){
-            LOG.error("Cannot get response from postReq method, caught {} stack trace {}", ex.getClass().getName(), ex.getStackTrace());
+            LOG.error("Cannot get response from postReq method, caught {}", ex.getClass().getName());
+            LOG.error("Stack trace {}", ex.getStackTrace());
         }
     }
 
@@ -87,7 +89,8 @@ public class ReqSender {
                 return getResponse;
             }
             catch (IOException ex){
-                LOG.error("Cannot get input stream in getReq method caught {} stack trace {}", ex.getClass().getName(), ex.getStackTrace());
+                LOG.error("Cannot get input stream in getReq method caught {}", ex.getClass().getName());
+                LOG.error("Stack trace {}", ex.getStackTrace());
             }
             finally {
                 //closing the connection
@@ -99,11 +102,13 @@ public class ReqSender {
         catch (MalformedURLException ex) {
             //exception from url constructor
             //inherits IOException, therefore firstly we are processing MalformedURLException
-            LOG.error("Cannot create url in getReq method caught {} stack trace {}", ex.getClass().getName(), ex.getStackTrace());
+            LOG.error("Cannot create url in getReq method caught {}", ex.getClass().getName());
+            LOG.error("Stack trace {}", ex.getStackTrace());
         }
         catch (IOException ex){
             //exception from url.openConnection
-            LOG.error("Cannot open connection in getReq method caught {} stack trace {}", ex.getClass().getName(), ex.getStackTrace());
+            LOG.error("Cannot open connection in getReq method caught {}", ex.getClass().getName());
+            LOG.error("Stack trace {}", ex.getStackTrace());
         }
         LOG.warn("getReq method returns null");
         return null;
@@ -111,7 +116,7 @@ public class ReqSender {
 
     public Response postReq(String postUrl, String testPostBody) {
         LOG.info("postReq method from {} class was invoked", ReqSender.class.getName());
-        if (null == testPostBody){
+        if (testPostBody == null){
             LOG.warn("postReq method got null as a request body therefore postReq method returns null");
             return null;
         }
@@ -132,7 +137,8 @@ public class ReqSender {
                 out.flush();
             }
             catch (IOException ex){
-                LOG.error("Cannot get output stream in postReq method caught {} stack trace {}", ex.getClass().getName(), ex.getStackTrace());
+                LOG.error("Cannot get output stream in postReq method caught {}", ex.getClass().getName());
+                LOG.error("Stack trace {}", ex.getStackTrace());
             }
 
             //checking response code
@@ -158,7 +164,8 @@ public class ReqSender {
                 return postResponse;
             }
             catch (IOException ex){
-                LOG.error("Cannot get input stream in postReq method caught {} stack trace {}", ex.getClass().getName(), ex.getStackTrace());
+                LOG.error("Cannot get input stream in postReq method caught {}", ex.getClass().getName());
+                LOG.error("Stack trace {}", ex.getStackTrace());
             }
             finally {
                 //closing the connection
@@ -169,11 +176,13 @@ public class ReqSender {
         catch (MalformedURLException ex) {
             //exception from url constructor
             //inherits IOException, therefore firstly we are processing MalformedURLException
-            LOG.error("Cannot create url in postReq method caught {} stack trace {}", ex.getClass().getName(), ex.getStackTrace());
+            LOG.error("Cannot create url in postReq method caught {} stack trace {}", ex.getClass().getName());
+            LOG.error("Stack trace {}", ex.getStackTrace());
         }
         catch (IOException ex){
             //exception from url.openConnection
-            LOG.error("Cannot open connection in postReq method caught {} stack trace {}", ex.getClass().getName(), ex.getStackTrace());
+            LOG.error("Cannot open connection in postReq method caught {} stack trace {}", ex.getClass().getName());
+            LOG.error("Stack trace {}", ex.getStackTrace());
         }
         LOG.warn("postReq method returns null");
         return null;

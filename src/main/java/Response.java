@@ -12,13 +12,13 @@ public class Response {
     private String responseMessage;
     private Map<String, List<String>> HeadersMap;
     private String bodyContent;
-    private static final Logger LOG = LoggerFactory.getLogger(ReqSender.class.getName());
+    private static final Logger LOG = LoggerFactory.getLogger(Response.class.getName());
 
     public Response(int responseCode, String responseMessage, Map<String, List<String>> map, String bodyContent) {
         this.responseCode = responseCode;
         this.responseMessage = responseMessage;
         this.HeadersMap = map;
-        if (null != bodyContent) {
+        if (bodyContent != null) {
             this.bodyContent = bodyContent;
         }
         else{
@@ -49,11 +49,11 @@ public class Response {
 
     public void printResponseToFile(String fileName){
         LOG.info("printResponseToFile method from {} class was invoked", Response.class.getName());
-        if (null == fileName){
+        if (fileName == null){
             LOG.error("printResponseToFile method got null as a name of file for writing response");
             return;
         }
-        if ("" == fileName){
+        if (fileName.equals("")){
             LOG.error("printResponseToFile method got empty string as a name of file for writing response");
             return;
         }

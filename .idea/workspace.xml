@@ -48,7 +48,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ReqSender">
+  <component name="RunManager" selected="JUnit.ResponseTest">
     <configuration name="ReqSender" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ReqSender" />
       <module name="TestTaskOne" />
@@ -96,9 +96,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ReqSender" />
         <item itemvalue="JUnit.ResponseTest" />
         <item itemvalue="JUnit.ReqSenderTest" />
+        <item itemvalue="Application.ReqSender" />
         <item itemvalue="JUnit.ReqSenderTest.sendPostReq" />
         <item itemvalue="JUnit.ReqSenderTest.sendGetReq" />
       </list>
