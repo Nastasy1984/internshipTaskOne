@@ -1,0 +1,12 @@
+27.08.2019 12:00:34.432 [main] INFO   ReqSender - getReq method from ReqSender class was invoked
+27.08.2019 12:00:34.465 [main] INFO   ReqSender - Connection with http://192.168.129.62:8083/OCPDataServices/api/customer/history/detail/123 was opened
+27.08.2019 12:00:34.490 [main] INFO   ReqSender - getReq method created response with code 200 and message OK
+27.08.2019 12:00:34.490 [main] INFO   ReqSender - Connection with http://192.168.129.62:8083/OCPDataServices/api/customer/history/detail/123 was closed
+27.08.2019 12:00:34.490 [main] INFO   ReqSender - printResponseToConsole method from Response class was invoked
+27.08.2019 12:00:34.494 [main] INFO   ReqSender - printResponseToFile method from Response class was invoked
+27.08.2019 12:00:34.495 [main] INFO   ReqSender - postReq method from ReqSender class was invoked
+27.08.2019 12:00:34.495 [main] INFO   ReqSender - Connection with http://192.168.129.62:8083/OCPDataServices/api/customer/search was opened
+27.08.2019 12:00:34.504 [main] INFO   ReqSender - postReq method created response with code 200 and message OK
+27.08.2019 12:00:34.504 [main] INFO   ReqSender - Connection with http://192.168.129.62:8083/OCPDataServices/api/customer/search was closed
+27.08.2019 12:00:34.504 [main] INFO   ReqSender - printResponseToConsole method from Response class was invoked
+27.08.2019 12:00:34.507 [main] INFO   ReqSender - printResponseToFile method from Response class was invoked
